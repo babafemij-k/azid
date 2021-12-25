@@ -2,6 +2,10 @@ html {
   scroll-behavior: smooth;
 }
 
+/* body {
+  background: url(./assets/subtle_bg.png);
+} */
+
 .item {
   transition: 0.5s ease-in-out;
 }
