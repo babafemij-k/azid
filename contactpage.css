@@ -1,0 +1,281 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #012a68;
+}
+
+section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: #4de3a4;
+}
+
+.wrapper {
+  position: relative;
+  min-width: 1100px;
+  min-height: 550px;
+  display: flex;
+  z-index: 1000;
+}
+
+.wrapper .contactInfo {
+  position: absolute;
+  top: 40px;
+  width: 350px;
+  height: calc(100% - 80px);
+  background: #012a68;
+  z-index: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
+}
+
+.wrapper .contactInfo h2 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.wrapper .contactInfo ul.info {
+  position: relative;
+  margin: 20px 0;
+}
+
+.wrapper .contactInfo ul.info li {
+  position: relative;
+  list-style: none;
+  display: flex;
+  margin: 20px 0;
+  cursor: pointer;
+  align-items: flex-start;
+}
+
+.wrapper .contactInfo ul.info li span:nth-child(1) {
+  width: 30px;
+  min-width: 30px;
+}
+
+.wrapper .contactInfo ul.info li span:nth-child(1) img {
+  max-width: 100%;
+  filter: invert(1);
+}
+
+.wrapper .contactInfo ul.info li span:nth-child(2) {
+  color: #fff;
+  font-weight: 300;
+  margin-left: 10px;
+}
+
+.wrapper .contactInfo ul#socials {
+  display: flex;
+  position: relative;
+}
+
+.wrapper .contactInfo div:nth-child(2) > img {
+  height: 15px;
+  margin-top: 15px;
+}
+
+.wrapper .contactInfo ul#socials li {
+  list-style: none;
+  margin-right: 15px;
+  width: 24px;
+  min-width: 24px;
+}
+
+.wrapper .contactInfo ul#socials li a {
+  text-decoration: none;
+}
+
+.wrapper .contactInfo ul#socials li a img {
+  max-width: 100%;
+  filter: invert(1);
+}
+
+.wrapper .contactForm {
+  position: absolute;
+  padding: 70px 50px;
+  padding-left: 250px;
+  margin-left: 150px;
+  height: 100%;
+  width: calc(100% - 150px);
+  background: #fff;
+  box-shadow: 0 50px 50px rgba(0, 0, 0, 0.25);
+}
+
+.wrapper .contactForm h2 {
+  color: #0f3959;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.wrapper .contactForm form#formBox {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 30px;
+}
+
+.wrapper .contactForm form#formBox .inputBox {
+  position: relative;
+  margin-bottom: 35px;
+}
+
+.wrapper .contactForm form#formBox .inputBox.w50 {
+  width: 47%;
+}
+
+.wrapper .contactForm form#formBox .inputBox.w100 {
+  width: 100%;
+}
+
+.wrapper .contactForm form#formBox .inputBox input,
+.wrapper .contactForm form#formBox .inputBox textarea {
+  width: 100%;
+  resize: none;
+  padding: 5px 0;
+  font-size: 18px;
+  font-weight: 300;
+  color: #333;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #777;
+}
+
+.wrapper .contactForm form#formBox .inputBox textarea {
+  height: 120px;
+}
+
+.wrapper .contactForm form#formBox .inputBox span {
+  position: absolute;
+  left: 0;
+  padding: 5px 0;
+  pointer-events: none;
+  font-size: 18px;
+  font-weight: 300;
+  transition: 0.3s;
+}
+
+.wrapper .contactForm form#formBox .inputBox input:focus ~ span,
+.wrapper .contactForm form#formBox .inputBox input:valid ~ span,
+.wrapper .contactForm form#formBox .inputBox textarea:focus ~ span,
+.wrapper .contactForm form#formBox .inputBox textarea:valid ~ span {
+  transform: translateY(-20px);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #095a55;
+  font-weight: 500;
+}
+
+.wrapper .contactForm form#formBox .inputBox input[type="submit"] {
+  position: relative;
+  cursor: pointer;
+  background: #012a68;
+  color: #fff;
+  border: none;
+  max-width: 150px;
+  padding: 12px;
+}
+
+.wrapper .contactForm form#formBox .inputBox input[type="submit"]:hover {
+  background: #145bc6;
+}
+
+/* Media Queries */
+
+@media (max-width: 1200px) {
+  .wrapper {
+    width: 90%;
+    margin: 20px;
+    min-width: auto;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+  }
+
+  .wrapper .contactInfo {
+    top: 0;
+    position: relative;
+    height: 550px;
+    box-shadow: none;
+  }
+
+  .wrapper .contactForm {
+    position: relative;
+    width: calc(100% - 350px);
+    padding-left: 0;
+    margin-left: 0;
+    padding: 40px;
+    height: 550px;
+    box-shadow: none;
+  }
+}
+
+@media (max-width: 991px) {
+  section {
+    background: #4de3a4;
+  }
+
+  section::before {
+    display: none;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .wrapper .contactInfo {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+  }
+
+  .wrapper .contactForm {
+    width: 100%;
+    height: auto;
+  }
+
+  .wrapper .contactInfo div:nth-child(2) {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .wrapper .contactForm {
+    padding: 25px;
+  }
+
+  .wrapper .contactInfo {
+    padding: 25px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .wrapper .contactInfo div:nth-child(2) {
+    margin-top: 40px;
+  }
+
+  .wrapper .contactForm form#formBox .inputBox.w50 {
+    width: 100%;
+  }
+}
