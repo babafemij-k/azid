@@ -83,7 +83,7 @@
 
     <!-- Header -->
     <header class="p-md-5">
-      <div class="container">
+      <div class="container reveal">
         <h1 class="my-5">
           We have the drive and expertise that makes the property design/
           development/ management, faster and easier.
@@ -126,7 +126,7 @@
 
     <!-- Who We Are -->
     <section class="py-5 p-md-5">
-      <div class="container">
+      <div class="container reveal">
         <div class="row">
           <div class="col-12 col-md-6">
             <h2 class="sub-heading">Who We Are</h2>
@@ -159,7 +159,7 @@
     <section>
       <div class="morale container-fluid py-4 p-md-5">
         <div class="container">
-          <h3 class="text-light">
+          <h3 class="text-light reveal">
             We are agile and responsive, reflecting the changing environment.
           </h3>
         </div>
@@ -364,7 +364,7 @@
             a team that is flexible to fit into any work environment.
           </p>
         </div>
-        <div class="row">
+        <div class="row reveal">
           <div class="col-12 col-md-6 col-lg-3 mb-4">
             <div class="team-img">
               <img id="stroke-1" src="./assets/stroke_1.png" alt="stroke" />
@@ -415,7 +415,7 @@
     </section>
 
     <section id="contactus">
-      <div class="wrapper">
+      <div class="wrapper reveal">
         <div class="contactInfo">
           <div>
             <h2>Contact Info</h2>
@@ -519,5 +519,26 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+    <!-- Scrolling effect -->
+    <script type="text/javascript">
+      window.addEventListener("scroll", reveal);
+
+      function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+
+        for (var i = 0; i < reveals.length; i++) {
+          var windowheight = window.innerHeight;
+          var revealtop = reveals[i].getBoundingClientRect().top;
+          var revealpoint = 150;
+
+          if (revealtop < windowheight - revealpoint) {
+            reveals[i].classList.add("active");
+          } else {
+            reveals[i].classList.remove("active");
+          }
+        }
+      }
+    </script>
   </body>
 </html>
