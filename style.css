@@ -155,8 +155,13 @@ h3 {
   /* height: 350px; */
   box-shadow: 0 26px 58px rgba(0, 0, 0, 0.15);
   padding: 18px;
-  padding-top: 100px;
+  padding-top: 80px;
   position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+}
+#services-container div#services .service p {
+  font-size: 12px;
 }
 
 #services-container div#services .service::before {
@@ -170,23 +175,25 @@ h3 {
   transform: scaleY(0);
   transform-origin: top;
   transition: transform 0.8s;
+  border-radius: 4px;
 }
 
 #services-container div#services .service:hover::before {
   transform: scaleY(1);
   transform-origin: top;
   transition: transform 0.8s;
+  border-radius: 4px;
 }
 
 #services-container div#services .service div img {
   position: absolute;
-  top: 50px;
+  top: 20px;
   transition: 0.5s;
 }
 
 #services-container div#services .service:hover div img {
   border-radius: 0;
-  top: 40px;
+  top: 30px;
 }
 
 #services-container div#services .service div:nth-child(2) {
@@ -215,6 +222,30 @@ h3 {
 
 #services-container div#services .service:hover #services-container::before {
   background-color: #fff;
+}
+
+.project {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+.project-text {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  justify-content: space-around;
+}
+.project-images {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.project-images img {
+  height: 400px;
+  margin-bottom: 40px;
+  align-self: center;
+  border-radius: 4px;
 }
 
 /* MEDIA QUERIES */
@@ -271,6 +302,16 @@ h3 {
   }
 }
 
+@media (max-width: 768px) {
+  .project-images {
+    width: 50%;
+  }
+
+  .project-images img {
+    height: 200px;
+  }
+}
+
 @media (max-width: 625px) {
   header h1 {
     font-size: 18px;
@@ -304,5 +345,18 @@ h3 {
   .morale img {
     opacity: 0.1;
     right: 0;
+  }
+
+  .title-box h5 {
+    display: none;
+  }
+  .title-box h3 {
+    font-size: 32px !important;
+  }
+  .description-box h4 {
+    display: none;
+  }
+  .description-box p {
+    font-size: 12px;
   }
 }
