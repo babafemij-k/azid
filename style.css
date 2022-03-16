@@ -33,7 +33,7 @@ h3 {
 
 .sub-heading {
   color: #012a68;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   z-index: 1;
 }
 
@@ -243,6 +243,7 @@ h3 {
 }
 .project-images img {
   height: 400px;
+  width: 350px;
   margin-bottom: 40px;
   align-self: center;
   border-radius: 4px;
